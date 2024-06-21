@@ -36,15 +36,15 @@ function newQR() {
 
 function copyQR() {
   fetch(qrImage.src)
-      .then(response => response.blob())
-      .then(blob => {
-          const item = new ClipboardItem({ "image/png": blob });
-          navigator.clipboard.write([item]);
-      })
-      .then(() => {
-          alert("QR code copied to clipboard!");
-      })
-      .catch(err => {
-          console.error("Could not copy image: ", err);
-      });
+    .then((response) => response.blob())
+    .then((blob) => {
+      const item = new ClipboardItem({ "image/png": blob });
+      navigator.clipboard.write([item]);
+    })
+    .then(() => {
+      alert("QR code copied to clipboard!");
+    })
+    .catch((err) => {
+      console.error("Could not copy image: ", err);
+    });
 }
