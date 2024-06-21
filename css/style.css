@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --light: #ffffff;
+  --less-light: #1bb89a;
+  --main-color: #27a28a;
+  --less-dark: #f49d1e;
+  --dark: #2c3e50;
+
+  --font-main: "Roboto", sans-serif;
+}
+
+
+#nav-colorway {
+  padding: 15px;
+}
+
+ul li ul#nav-colorway li {
+  display: block;
+  padding: 0;
+}
+
+ul li ul#nav-colorway {
+  width: 10%;
+  position: absolute;
+  z-index: 999;
+  display: none;
+  border: var(--light) solid 1px;
+}
+
+ul li:hover #nav-colorway {
+  display: block;
+  background: var(--less-dark);
+  border-radius: 20px;
+}
+
+ul li #nav-colorway button,
+ul li #nav-colorway input {
+  color: var(--light);
+  width: 100%;
+  font-size: 100%;
+  border: none;
+  background: transparent;
+  padding: 10px;
+}
+
+ul li #nav-colorway button:hover,
+ul li #nav-colorway input:hover {
+  color: var(--dark);
+}
+
+ul li #nav-colorway input {
+  border: var(--less-dark) solid 1px;
+}
+ul li #nav-colorway input::placeholder {
+  color: var(--light);
+  text-align: center;
+}
+
+
+/* Reset Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  color: var(--light);
+}
+
+body {
+  height: 100vh;
+  background: var(--less-light);
+}
+
+.top-nav {
+  text-align: center;
+  background: var(--less-dark);
+}
+
+#top-left-logo {
+  display: none;
+}
+
+.top-nav li {
+  padding: 10px;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.top-nav li:hover,
+.top-nav li:active {
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 550px) {
+  .top-nav {
+    display: flex;
+    place-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #top-left-logo {
+    display: inline;
+    font-size: 50px;
+    position: relative;
+    top: -70px;
+    left: 50px;
+  }
+  #top-lef-logo:hover {
+    transform: rotate(0.3turn);
+  }
+}
